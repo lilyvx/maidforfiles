@@ -7,7 +7,7 @@ BASE_DEST_DIR = r"C:/Users/User/Documents"
 
     #routing table
 ROUTING_TABLE = {
-    "Cloud Computing" : ["UECS3223", "Cloud Computing", "Elastic Beanstalk"],
+    "Cloud Computing" : ["UECS3223", "UECS_3223","Cloud Computing", "Elastic Beanstalk", "RDD", "EC2", "S3", "AWS", "Spark", "Lambda", "lambda", "DynamoDB"],
 }
 
 all_files = os.listdir(SOURCE_DIR) #list directory from our constant directory
@@ -21,7 +21,7 @@ for stuff in all_files:
     if os.path.isdir(full_item_path): #see if its a directory
         continue #skip if it's a directory
     for folder_name, keyword_list in ROUTING_TABLE.items():
-        
+
         for keyword in keyword_list:
             if keyword in stuff:
                 print(f"*MATCH FOUND*: File '{stuff}' matches keyword '{keyword}'")
