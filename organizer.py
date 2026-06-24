@@ -7,16 +7,19 @@ BASE_DEST_DIR = r"C:/Users/User/Documents"
 
     #routing table
 ROUTING_TABLE = {
-    "Cloud Computing" : ["UECS3223", "UECS_3223","Cloud Computing", "Elastic Beanstalk", "RDD", "EC2", "S3", "AWS", "Spark", "Lambda", "lambda", "DynamoDB"],
+    "Cloud Computing" : ["UECS3223", "UECS_3223","Cloud Computing", "Elastic Beanstalk", "RDD", "EC2", "AWS", "Spark", "Lambda", "lambda", "DynamoDB"],
+    "Wireless Application Devlopment"
+
+
 }
 
 all_files = os.listdir(SOURCE_DIR) #list directory from our constant directory
 print("Here are all the files found inside your Downloads Folder:")
 print(all_files)
 
-for stuff in all_files:
+for stuff in all_files: #going thru all files
 
-    full_item_path = os.path.join(SOURCE_DIR, stuff) #join the path to the file
+    full_item_path = os.path.join(SOURCE_DIR, stuff) #join the path to the file 
     
     if os.path.isdir(full_item_path): #see if its a directory
         continue #skip if it's a directory
